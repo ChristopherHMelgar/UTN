@@ -5,6 +5,8 @@
 #include "utn.h"
 #include "eComputer.h"
 
+int controller_MAP(LinkedList* pArrayList);
+
 int controller_loadFromText(char* path , LinkedList* pArrayList)
 {
 	//char nombreDeArchivo[20];
@@ -31,6 +33,8 @@ int controller_listComputer(LinkedList* pArrayList)
 	//	printf("\nCONTROLLER LISTA DE CACHORROS") esta asi pq no tiene getter y setter, cambiar
 		Node* nAux = pArrayList->pFirstNode;
 		eComputer* computer = nAux->pElement;
+
+		controller_MAP(pArrayList);
 
 		for(int i=0; i<ll_len(pArrayList); i++){
 			char idTipoAux[20];
@@ -68,15 +72,17 @@ int controller_orderComputer(LinkedList* pArrayList)
 
 int controller_MAP(LinkedList* pArrayList)
 {
+	int retorno = -1;
 	printf("\nMAP DE COMPUTADORAS: \n");
 	if(pArrayList != NULL)
 	{
 		if(ll_map(pArrayList, computer_oferta) == 0)
 		{
-			controller_listComputer(pArrayList);
+//			controller_listComputer(pArrayList);
+			retorno = 0;
 		}
 	}
-	return 0;
+	return retorno;
 }
 
 int controller_filterDesktop(LinkedList* pArrayList)

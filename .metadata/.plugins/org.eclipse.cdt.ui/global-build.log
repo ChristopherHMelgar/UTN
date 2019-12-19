@@ -1,40 +1,6 @@
-23:09:57 **** Incremental Build of configuration Debug for project Recuperatorio ****
+19:21:40 **** Incremental Build of configuration Debug for project Final ****
 make all 
-Building file: ../src/Controller.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Controller.d" -MT"src/Controller.o" -o "src/Controller.o" "../src/Controller.c"
-../src/Controller.c: In function ‘controller_listComputer’:
-../src/Controller.c:39:5: warning: implicit declaration of function ‘strcpy’ [-Wimplicit-function-declaration]
-     strcpy(idTipoAux, "DESKTOP");
-     ^~~~~~
-../src/Controller.c:39:5: warning: incompatible implicit declaration of built-in function ‘strcpy’
-../src/Controller.c:39:5: note: include ‘<string.h>’ or provide a declaration of ‘strcpy’
-../src/Controller.c:43:5: warning: incompatible implicit declaration of built-in function ‘strcpy’
-     strcpy(idTipoAux, "LAPTOP");
-     ^~~~~~
-../src/Controller.c:43:5: note: include ‘<string.h>’ or provide a declaration of ‘strcpy’
-../src/Controller.c: In function ‘controller_MAP’:
-../src/Controller.c:74:6: warning: implicit declaration of function ‘ll_map’; did you mean ‘ll_pop’? [-Wimplicit-function-declaration]
-   if(ll_map(pArrayList, computer_oferta) == 0)
-      ^~~~~~
-      ll_pop
-Finished building: ../src/Controller.c
- 
-Building file: ../src/eComputer.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/eComputer.d" -MT"src/eComputer.o" -o "src/eComputer.o" "../src/eComputer.c"
-Finished building: ../src/eComputer.c
- 
-Building file: ../src/parser.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/parser.d" -MT"src/parser.o" -o "src/parser.o" "../src/parser.c"
-Finished building: ../src/parser.c
- 
-Building target: Recuperatorio
-Invoking: GCC C Linker
-gcc  -o "Recuperatorio"  ./src/Controller.o ./src/LinkedList.o ./src/Recuperatorio.o ./src/eComputer.o ./src/parser.o ./src/utn.o   
-Finished building target: Recuperatorio
- 
-23:10:03 **** Incremental Build of configuration Debug for project Recuperatorio ****
+make: Nothing to be done for 'all'.
+19:21:48 **** Incremental Build of configuration Debug for project Final ****
 make all 
 make: Nothing to be done for 'all'.

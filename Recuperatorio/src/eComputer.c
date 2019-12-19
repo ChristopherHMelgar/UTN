@@ -9,7 +9,7 @@ eComputer* new_eComputer()
 	return (eComputer*)malloc(sizeof(eComputer));
 }
 
-eComputer* new_eComputerConParametros(char* idStr, char* descripcionStr, char* precioStr, char* idTipoStr, char* ofertaStr)
+eComputer* new_eComputerConParametros(char* idStr, char* descripcionStr, char* precioStr, char* idTipoStr)
 {
 	//agregar getter y setter
 	eComputer* pEcomputer=NULL;
@@ -23,7 +23,7 @@ eComputer* new_eComputerConParametros(char* idStr, char* descripcionStr, char* p
 	strcpy(pEcomputer->Descripcion, descripcionStr);
 	pEcomputer->precio = precio;
 	pEcomputer->idTipo = idTipo;
-	strcpy(pEcomputer->oferta, ofertaStr);
+//	strcpy(pEcomputer->oferta, ofertaStr);
 
 	return pEcomputer;
 }
@@ -47,19 +47,20 @@ int computer_order_idTipo(void* this, void* thisMasUno)
 int computer_oferta(void* this)
 {
 	int retorno = 0;
-	eComputer* coputadoraOferta;
-	coputadoraOferta = (eComputer*) this;
+	eComputer* computadoraOferta;
+	computadoraOferta = (eComputer*) this;
 
 	if(this != NULL)
 	{
-		if(coputadoraOferta->idTipo == 2)
+		printf("COMPU OFERTA: %d", computadoraOferta->idTipo);
+		if(computadoraOferta->idTipo == 2)
 		{
-			strcpy(coputadoraOferta->oferta, "SIN DATOS");
+			strcpy(computadoraOferta->oferta, "SIN DATOS");
 			retorno = 1;
 		}
-		if(coputadoraOferta->idTipo == 1 && coputadoraOferta->precio > 20000)
+		if(computadoraOferta->idTipo == 1 && computadoraOferta->precio > 20000)
 		{
-			strcpy(coputadoraOferta->oferta, "50% DESCUENTO");
+			strcpy(computadoraOferta->oferta, "50% DESCUENTO");
 			retorno = 1;
 		}
 	}

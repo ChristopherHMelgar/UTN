@@ -27,10 +27,10 @@ int parser_eComputerFromText(FILE* pFile , LinkedList* pArrayListeComputer)
 
     while(feof(pFile)==0)
     {
-        if (fscanf(pFile,"%[^,],%[^,],%[^,],%[^,],%[^\n]\n",bufferID_Computer,bufferDescription,bufferPrecio,bufferIdTipo,bufferOferta)==5)
+        if (fscanf(pFile,"%[^,],%[^,],%[^,],%[^\n]\n",bufferID_Computer,bufferDescription,bufferPrecio,bufferIdTipo)==4)
         {
         	if(count > 0) {
-        		auxiliarPunteroEcomputer = new_eComputerConParametros(bufferID_Computer, bufferDescription, bufferPrecio, bufferIdTipo, bufferOferta);
+        		auxiliarPunteroEcomputer = new_eComputerConParametros(bufferID_Computer, bufferDescription, bufferPrecio, bufferIdTipo);
         		ll_add(pArrayListeComputer,auxiliarPunteroEcomputer);
         		retorno=0;
         	}

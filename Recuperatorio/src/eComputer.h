@@ -10,7 +10,7 @@ typedef struct{
 }eComputer;
 
 eComputer* new_eComputer();
-eComputer* new_eComputerConParametros(char* id, char* descripcion, char* precio, char* idTipo, char* oferta);
+eComputer* new_eComputerConParametros(char* id, char* descripcion, char* precio, char* idTipo);
 //int Cachorros_setId(Cachorro* this,int id);
 //int Cachorros_getId(Cachorro* this,int* id);
 //int Cachorros_Nombre(Cachorro* this,char* Nombre);
