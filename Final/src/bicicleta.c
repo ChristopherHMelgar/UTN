@@ -26,3 +26,23 @@ bicicleta* new_bicicletaConParametros(char* idStr, char* nombreStr, char* tipoSt
 
 	return pBicicleta;
 }
+
+int bicicleta_velocidadPromedio(void* this)
+{
+	int retorno = 0;
+	int kilometroRecorridos = 10;
+
+	bicicleta* bicletaVelocidadPromedio;
+	bicletaVelocidadPromedio = (bicicleta*) this;
+
+	if(this != NULL)
+	{
+		float auxVelocidad;
+
+		auxVelocidad = (float)kilometroRecorridos / (float)bicletaVelocidadPromedio->TIEMPO;
+		printf("\nVELOCIDAD PROMEDIO: %f", auxVelocidad);
+		bicletaVelocidadPromedio->VELOCIDAD = auxVelocidad;
+	}
+
+	return retorno;
+}

@@ -1,6 +1,15 @@
-19:21:40 **** Incremental Build of configuration Debug for project Final ****
+19:49:53 **** Incremental Build of configuration Debug for project Final ****
 make all 
-make: Nothing to be done for 'all'.
-19:21:48 **** Incremental Build of configuration Debug for project Final ****
+Building file: ../src/bicicleta.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/bicicleta.d" -MT"src/bicicleta.o" -o "src/bicicleta.o" "../src/bicicleta.c"
+Finished building: ../src/bicicleta.c
+ 
+Building target: Final
+Invoking: GCC C Linker
+gcc  -o "Final"  ./src/Controller.o ./src/Final.o ./src/LinkedList.o ./src/bicicleta.o ./src/parser.o ./src/utn.o   
+Finished building target: Final
+ 
+19:50:00 **** Incremental Build of configuration Debug for project Final ****
 make all 
 make: Nothing to be done for 'all'.

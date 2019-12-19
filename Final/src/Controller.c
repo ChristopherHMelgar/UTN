@@ -44,7 +44,7 @@ int controller_listBicicleta(LinkedList* pArrayList)
 //			{
 //				strcpy(idTipoAux, "LAPTOP");
 //			}
-			printf("ID_BIKE: %d\n1.NOMBRE: %s\n2.TIPO: %s\n3.TIEMPO: %d\n\n", bicicleta->ID_BIKE, bicicleta->NOMBRE, bicicleta->TIPO, bicicleta->TIEMPO);
+			printf("ID_BIKE: %d\n1.NOMBRE: %s\n2.TIPO: %s\n3.TIEMPO: %d\n4.VELOCIDAD: %f\n\n", bicicleta->ID_BIKE, bicicleta->NOMBRE, bicicleta->TIPO, bicicleta->TIEMPO, bicicleta->VELOCIDAD);
 
 			if(nAux->pNextNode != NULL){
 				nAux = nAux->pNextNode;
@@ -52,4 +52,19 @@ int controller_listBicicleta(LinkedList* pArrayList)
 			}
 		}
 		return 1;
+}
+
+int controller_velocidadPromedio(LinkedList* pArrayList)
+{
+	int retorno = -1;
+		printf("\nVELOCIDAD PROMEDIO: \n");
+		if(pArrayList != NULL)
+		{
+			if(ll_map(pArrayList, bicicleta_velocidadPromedio) == 0)
+			{
+	//			controller_listComputer(pArrayList);
+				retorno = 0;
+			}
+		}
+	return retorno;
 }

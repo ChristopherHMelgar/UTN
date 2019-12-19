@@ -30,8 +30,8 @@ int main(void) {
 //
 //					//controller_listCachorrosCallejeros(listaCachorros);
 //					break;
-//				case 3: controller_orderComputer(listaComputer);
-//					break;
+				case 3: controller_velocidadPromedio(listaBicicleta);
+					break;
 //				case 4: controller_MAP(listaComputer);
 //					break;
 //				case 5: controller_filterDesktop(listaComputer);
@@ -50,7 +50,7 @@ void menu(int* opcionMenu)
 	printf("\n");
 	printf("1. CARGARA ARCHIVO\n");
 	printf("2. LISTAR BICICLETAS\n");
-	printf("3. ORDENAR POR ID TIPO\n");
+	printf("3. VELOCIDAD PROMEDIO\n");
 	printf("4. MAP\n");
 	printf("5. SOLO DESKTOP\n");
 	printf("8. SALIR\n");
